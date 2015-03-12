@@ -4,7 +4,6 @@ scriptDetailsUrl = "https://github.com/fengye/MyoMouse"
 
 myo.controlMouse(true)
 myo.setLockingPolicy('none')
--- say hello world
 
 
 function activeAppName()
@@ -38,15 +37,16 @@ end
 
 
 function onForegroundWindowChange(app, title)
-    myo.debug("onForegroundWindowChange: " .. app .. ", " .. title)
+    -- myo.debug("onForegroundWindowChange: " .. app .. ", " .. title)
     return true
 end
 
 
 function onActiveChange(isActive)
-    myo.debug("onActiveChange")
+    -- myo.debug("onActiveChange")
 
     if isActive then
+    	-- say hello world
     	myo.vibrate('long')
     end
 end
